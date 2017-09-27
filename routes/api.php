@@ -15,4 +15,7 @@ Route::prefix('v1')->group(function () {
         Route::post('/create', "UserController@addUser");
         Route::get('/{id}', "UserController@get");
     });
+
+    Route::post('/upvote', "VotingController@upvote");
+    Route::post('/downvote', "VotingController@downvote");
 });
